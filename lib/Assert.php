@@ -28,6 +28,7 @@ final class Assert
      */
     private static $mappings = array(
         'int' => 'Star\\Component\\Assertion\\Type\\IntegerAssert',
+        'numeric' => 'Star\\Component\\Assertion\\Type\\NumericAssert',
     );
 
     /**
@@ -38,6 +39,16 @@ final class Assert
     public static function isInteger($value)
     {
         return self::createAssertion('int')->isValid($value);
+    }
+
+    /**
+     * @param mixed $value
+     *
+     * @return bool
+     */
+    public static function isNumeric($value)
+    {
+        return self::createAssertion('numeric')->isValid($value);
     }
 
     /**

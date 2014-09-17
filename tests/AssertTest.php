@@ -20,4 +20,9 @@ class AssertTest extends \PHPUnit_Framework_TestCase
     {
         $this->assertTrue(Assert::isInteger(3));
     }
+
+    public function test_should_support_numeric_assertion()
+    {
+        $this->assertTrue(Assert::isNumeric(3));
+    }
 }
